@@ -1,18 +1,7 @@
 from flask import Flask
+from data.data_productos import productos, categorias
 
 app = Flask(__name__)
-
-productos = [
-    {"id": 1, "descripcion": "Zapatillas 32", "categoria_id": 1},
-    {"id": 2, "descripcion": "Remera", "categoria_id": 2},
-    {"id": 3, "descripcion": "Zapatillas Nike", "categoria_id": 1},
-]
-
-categorias = [
-    {"id": 1, "descripcion": "Calzado"},
-    {"id": 2, "descripcion": "Ropa"},
-]
-
 
 @app.route("/")
 def home():
